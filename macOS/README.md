@@ -174,21 +174,21 @@ the minimal, blazing-fast, and infinitely customizable prompt for any shell [Sta
 
 ### vim 설정
 
-1. $XDG_CONFIG_DIR/vimrc (~/.config/vim/vimrc)
+1. $MYVIMDIR/vimrc (~/.config/vim/vimrc)
 
     - XDG base directory 스펙 관련 설정
     - vim 기본 설정 호출
     - 기능별 설정 파일 호출
 
-2. $XDG_CONFIG_DIR/options.vim (~/.config/vim/options.vim)
+2. $MYVIMDIR/options.vim (~/.config/vim/options.vim)
 
     - 기본 옵션 설정
 
-3. $XDG_CONFIG_DIR/plugins.vim (~/.config/vim/plugins.vim)
+3. $MYVIMDIR/plugins.vim (~/.config/vim/plugins.vim)
 
     - 플러그인 설정
 
-4. $XDG_CONFIG_DIR/keybinds.vim (~/.config/vim/keybinds.vim)
+4. $MYVIMDIR/keybinds.vim (~/.config/vim/keybinds.vim)
 
     - fzf.vim 키 설정
 
