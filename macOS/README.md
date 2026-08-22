@@ -39,7 +39,7 @@ a general-purpose command-line fuzzy finder and an interactive terminal toolkit
 
 2. `vim` 설정 파일에 플러그인 등록
 
-```text
+```vim
     " vim 설정 파일
     " ($HOME/.vimrc, ~/.vim/vimrc, $XDG_CONFIG_HOME/vim/vimrc)
 
