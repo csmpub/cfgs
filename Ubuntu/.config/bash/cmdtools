@@ -1,0 +1,8 @@
+# fzf bash integration
+if [[ ! "$PATH" == */home/csmpub/.config/vim/plugged/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/home/csmpub/.config/vim/plugged/fzf/bin"
+fi
+eval "$(fzf --bash)"
+
+# setup zoxide on bash
+eval "$(zoxide init bash)"

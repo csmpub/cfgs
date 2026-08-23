@@ -1,0 +1,6 @@
+# eza
+alias e='eza --icons'
+alias ez='eza -F --icons'
+alias ea='eza -A --icons'
+alias el='eza -al --icons --git'
+alias et='eza --tree --icons'

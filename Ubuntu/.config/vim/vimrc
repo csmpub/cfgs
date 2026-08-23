@@ -1,0 +1,29 @@
+" XDG 기본 디렉토리 경로 적용
+" ----------------------
+let s:xdg_state_home = empty($XDG_STATE_HOME) ? expand('$HOME/.local/state') : $XDG_STATE_HOME
+
+" 스왑, 백업, 언두, 뷰 폴더 자동 생성 및 경로 지정
+" ----------------------------------------
+let &backupdir = s:xdg_state_home . '/vim/backup'
+let &directory = s:xdg_state_home . '/vim/swap'
+let &undodir   = s:xdg_state_home . '/vim/undo'
+let &viewdir   = s:xdg_state_home . '/vim/view'
+
+for s:dir in [&backupdir, &directory, &undodir, &viewdir]
+  if !isdirectory(s:dir)
+    call mkdir(s:dir, 'p', 0700)
+  endif
+endfor
+
+" viminfo/shada 파일 경로 지정
+" -------------------------
+if !has('nvim')
+  let &viminfofile = s:xdg_state_home . '/vim/viminfo'
+endif
+
+" 프로젝트에서 유지하는 설정 포함
+source $VIMRUNTIME/vimrc_example.vim
+
+source $MYVIMDIR/keybinds.vim
+source $MYVIMDIR/options.vim
+source $MYVIMDIR/plugins.vim
