@@ -116,11 +116,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# set bash Shell Configuration Directory
-# and run user configuration file
-
-if [[ -d "$HOME/.config/bash" ]]
-then
-    export BDOTDIR="$HOME/.config/bash";
-    source $BDOTDIR/bashrc;
-fi
+# 사용자 설정 시작
+[ -f ~/.config/bash/bashrc ] && . ~/.config/bash/bashrc

@@ -1,11 +1,3 @@
-# lines added while nvm installation
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Added by Antigravity CLI installer
-#export PATH="/home/csmphd/.local/bin:$PATH"
-
 # Setup zoxide on bash
 eval "$(zoxide init bash)"
 
@@ -14,6 +6,3 @@ if [[ ! "$PATH" == */home/csmphd/.config/vim/plugged/fzf/bin* ]]; then
   PATH="${PATH:+${PATH}:}/home/csmphd/.config/vim/plugged/fzf/bin"
 fi
 eval "$(fzf --bash)"
-
-# bat integration with other tools
-#export MANPAGER="bat -plman"

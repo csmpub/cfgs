@@ -1,5 +1,5 @@
 # History
-[ ! -d $XDG_STATE_HOME/bash ] && mkdir -p $XDG_STATE_HOME/bash
+[[ ! -d "$XDG_STATE_HOME/bash" ]] && mkdir -p "$XDG_STATE_HOME/bash"
 HISTFILE="$XDG_STATE_HOME/bash/history"
 HISTCONTROL='ignoreboth:erasedups'
 HISTIGNORE='&:l:ls:ll:la:e:ez:ea:el:et:history:history *:exit:logout:fg:bg:jobs'
