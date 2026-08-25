@@ -1,6 +1,6 @@
-# eza
-alias e='eza --icons'
-alias ez='eza -F --icons'
-alias ea='eza -A --icons'
-alias el='eza -al --icons --git'
-alias et='eza --tree --icons'
+# eza: a modern replacement for ls
+alias els='eza --icons --group-directories-first'
+alias el='eza -F --icons --group-directories-first'
+alias ela='eza -a --icons --group-directories-first'
+alias ell='eza -aalbh@HF --icons --time-style="+%y/%m/%d %H:%M" --total-size --git --git-repos'
+alias elt='eza -albh@ --no-user --no-time --total-size --git --git-repos --tree --level=4 -I=.git'

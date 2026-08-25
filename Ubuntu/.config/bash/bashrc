@@ -1,28 +1,27 @@
-# set XDG Base Directories
+# XDG Base Directories
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 
-if [[ -z "$XDG_CONFIG_HOME" ]]
-then
-    export XDG_CONFIG_HOME="$HOME/.config"
-fi
-if [[ -z "$XDG_DATA_HOME" ]]
-then
-    export XDG_DATA_HOME="$HOME/.local/share"
-fi
-if [[ -z "$XDG_STATE_HOME" ]]
-then
-    export XDG_STATE_HOME="$HOME/.local/state"
-fi
-if [[ -z "$XDG_CASHE_HOME" ]]
-then
-    export XDG_CACHE_HOME="$HOME/.cache"
-fi
+# bash user configuration directory
+export BASH_DOTDIR="$XDG_CONFIG_HOME/bash"
 
+# either set bat as man pager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+# or define man wrapping function using bat piping
+# man() {
+#   command man "$@" | bat -l man -p
+# }
 
-# set bash Options
-[[ -f $BDOTDIR/options ]] && . $BDOTDIR/options
+# set function to highlight --help messages
+# how to use: help <command> like 'help col'
+help() {
+    "$@" --help 2>&1 | bat -l help -p 
+}
 
-# set CLI tools
-[[ -f $BDOTDIR/cmdtools ]] && . $BDOTDIR/cmdtools
-
-# set alias definitions
-[[ -f $BDOTDIR/aliases ]] && . $BDOTDIR/aliases
+# source configuration files by categories
+[ -f $BASH_DOTDIR/options ] && . $BASH_DOTDIR/options
+[ -f $BASH_DOTDIR/aliases ] && . $BASH_DOTDIR/aliases
+[ -f $BASH_DOTDIR/commands ] && . $BASH_DOTDIR/commands
