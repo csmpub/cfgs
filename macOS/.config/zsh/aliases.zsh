@@ -23,6 +23,10 @@ if command -v eza >/dev/null 2>&1; then
 fi
 
 # bat: a "cat" clone with syntax highlighting and Git integration
+
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+
 # Better cat, some distro install `bat` as `batcat`
 [[ "command -v bat" ]] && alias cat='bat'
 [[ "command -v batcat" ]] && alias cat='batcat'
