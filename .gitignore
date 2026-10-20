@@ -1,3 +1,9 @@
+/.quarto/
+/_site/
+*_files/
+
+**/*.quarto_ipynb
+
 ####### macOS #######
 # General
 .DS_Store
