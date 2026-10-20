@@ -1,8 +1,0 @@
-# Setup zoxide on bash
-eval "$(zoxide init bash)"
-
-# Setup fzf installed as vim plugin on bash 
-if [[ ! "$PATH" == */home/csmphd/.config/vim/plugged/fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/home/csmphd/.config/vim/plugged/fzf/bin"
-fi
-eval "$(fzf --bash)"
